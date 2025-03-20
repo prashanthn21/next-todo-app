@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Dark Mode App with Local Storage
 
-## Getting Started
+## 🚀 Features
+- Next.js App Router (Latest Version)
+- Dark Mode Toggle using Context API
+- Theme Persistence using Local Storage
+- Framer Motion for Animations
+- Tailwind CSS for Styling
+- App Router Structure (with `layout.tsx`)
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📂 Folder Structure
+```
+nextjs-dark-mode-app/
+ ├── app/
+ │    ├── components/
+ │    │    ├── context/
+ │    │    │    ├── ThemeContext.tsx  (Handles theme switching)
+ │    │    ├── Navbar.tsx  (Includes theme toggle button)
+ │    ├── styles/
+ │    │    ├── globals.css (Tailwind global styles)
+ │    ├── layout.tsx  (Root Layout with ThemeProvider)
+ │    ├── page.tsx (Home Page)
+ ├── tailwind.config.js (Tailwind Dark Mode Config)
+ ├── .gitignore (Ignore unnecessary files)
+ ├── package.json (Project Dependencies)
+ ├── tsconfig.json (TypeScript Config)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 1. Installation
+### Step 1: Clone the Repository
+```sh
+git clone https://github.com/yourusername/nextjs-dark-mode-app.git
+cd nextjs-dark-mode-app
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Step 2: Install Dependencies
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📌 2. Configure Tailwind CSS
+Ensure your `tailwind.config.js` is properly set up:
+```js
+module.exports = {
+  darkMode: "class",
+  content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  theme: { extend: {} },
+  plugins: [],
+};
+```
 
-## Learn More
+## 📌 3. Implementing Dark Mode with Context API
+Create a **Theme Context** inside `components/context/ThemeContext.tsx`.
 
-To learn more about Next.js, take a look at the following resources:
+## 📌 4. Applying Global Styles
+Edit **`styles/globals.css`** for Tailwind styles.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 5. Setting Up Layout (`layout.tsx`)
+Wrap your app in `ThemeProvider`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📌 6. Creating Navbar with Theme Toggle
+Add **`components/Navbar.tsx`**.
 
-## Deploy on Vercel
+## 📌 7. Home Page
+Modify **`page.tsx`**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📌 8. Running the Project
+Run the development server:
+```sh
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📌 9. Pushing to GitHub
+### Step 1: Initialize Git
+```sh
+git init
+git add .
+git commit -m "Initial commit - Next.js Dark Mode App"
+```
+
+### Step 2: Create a Repository on GitHub
+
+### Step 3: Add Remote & Push Code
+```sh
+git remote add origin https://github.com/yourusername/nextjs-dark-mode-app.git
+git branch -M main
+git push -u origin main
+```
+
+## 📌 10. Deploying to Vercel
+1. Install Vercel CLI:
+   ```sh
+   npm i -g vercel
+   ```
+2. Deploy the project:
+   ```sh
+   vercel
+   ```
+3. Follow the prompts to set up the deployment.
+
+🎉 Now your Next.js Dark Mode App is live! 🚀
+
